@@ -6,9 +6,11 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
-    MemberService memberService = new AppConfig().memberService();
+    AppConfig appConfig=new AppConfig();
+    MemberService memberService = appConfig.memberService();
+
     @Test
-    void join(){
+    void join() {
         //given
         Member member = new Member(1L, "memberA", Grade.VIP);
 
